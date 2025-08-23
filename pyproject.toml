@@ -1,0 +1,10 @@
+[project]
+name = "book"
+version = "0.1.0"
+description = "The book for expressive analytics at any scale."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ibis-framework[duckdb,examples]>=10.8.0",
+    "jupyter>=1.1.1",
+]

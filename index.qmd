@@ -1,0 +1,18 @@
+---
+title: "Book Title"
+format: html
+---
+
+# Table of Contents
+
+Welcome to this book. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Chapters
+
+1. [Chapter 1: Introduction](book/chapter1.qmd)
+2. [Chapter 2: Getting Started](book/chapter2.qmd)
+
+---
+
+*This is a work in progress. More chapters will be added soon.*

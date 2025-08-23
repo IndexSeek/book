@@ -1,0 +1,21 @@
+project:
+  type: book
+  output-dir: _book
+
+jupyter: python3
+
+book:
+  title: "Book About Ibis"
+  author: "Author Name"
+  date: "2025"
+  
+  chapters:
+    - index.qmd
+    - book/chapter1.qmd
+    - book/chapter2.qmd
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
