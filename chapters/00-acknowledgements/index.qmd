@@ -1,0 +1,18 @@
+---
+title: "Acknowledgements"
+format: html
+---
+
+This book would not be possible without:
+
+- Wes McKinney creating Ibis
+- Hussain Sultan for introducing me to the project
+- Phillip Cloud and many others maintaining, adding features, and encouraging me
+to contribute
+
+There are a lot of people and organizations I need to add here and way more details
+on the above and will do so soon.
+
+---
+
+*This chapter is a work in progress.*

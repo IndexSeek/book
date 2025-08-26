@@ -1,0 +1,39 @@
+---
+title: "Complex Data Structures"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Work with array data types and operations
+- Handle JSON data extraction and manipulation
+- Process nested and hierarchical data structures
+- Perform advanced string operations on complex data
+
+Real-world data often contains complex structures like arrays and JSON. This chapter
+demonstrates how to work with these complex data types using Ibis.
+
+## Working with Complex Data Types
+
+Since the World of Warcraft dataset contains primarily simple types, we'll create
+examples that demonstrate array and string manipulation patterns you'll encounter with
+complex data:
+
+```{python}
+# TODO: Add arrays, JSON, and complex type examples
+# This will demonstrate:
+# - Working with array columns (creation, indexing, length, unnesting)
+# - JSON data manipulation (extraction, nested queries)
+# - String arrays and complex string operations
+# - Nested data structures and hierarchical queries
+```
+
+This chapter will demonstrate techniques for working with complex data types including
+arrays, JSON structures, nested data, and advanced string manipulation patterns commonly
+found in real-world datasets.
+
+---
+
+*This chapter is a work in progress.*

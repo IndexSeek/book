@@ -1,17 +1,38 @@
 ---
-title: "Book Title"
+title: "Data Wrangling with Ibis"
 format: html
 ---
 
-# Table of Contents
+<div style="text-align: center; margin: 2rem 0;">
+<img src="https://ibis-project.org/logo.svg" alt="Ibis Logo" style="max-width: 200px;
+height: auto;">
+</div>
 
-Welcome to this book. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua.
+# Table of Contents
 
 ## Chapters
 
-1. [Chapter 1: Introduction](book/chapter1.qmd)
-2. [Chapter 2: Getting Started](book/chapter2.qmd)
+0. [Acknowledgements](chapters/00-acknowledgements/index.qmd)
+1. [Introduction](chapters/01-introduction/index.qmd)
+2. [Installation & First Steps](chapters/02-installation-first-steps/index.qmd)
+3. [Core Concepts & Expression System](chapters/03-core-concepts-expression-system/index.qmd)
+4. [Working with Data Types](chapters/04-working-with-data-types/index.qmd)
+5. [Data Sources & Backends](chapters/05-data-sources-backends/index.qmd)
+6. [Data Selection & Transformation](chapters/06-data-selection-transformation/index.qmd)
+7. [Grouping & Aggregation](chapters/07-grouping-aggregation/index.qmd)
+8. [Joining & Combining](chapters/08-joining-combining/index.qmd)
+9. [Window Functions](chapters/09-window-functions/index.qmd)
+10. [Arrays, JSON & Complex Types](chapters/10-arrays-json-complex-types/index.qmd)
+11. [Inserting & Deleting](chapters/11-inserting-deleting/index.qmd)
+12. [Geospatial](chapters/12-geospatial/index.qmd)
+13. [Real-World Examples](chapters/13-real-world-examples/index.qmd)
+
+## Appendices
+
+- [Appendix A: Backend
+Compatibility](chapters/appendix-a-backend-compatibility/index.qmd)
+- [Appendix B: Migration Guide](chapters/appendix-b-migration-guide/index.qmd)
+- [Appendix C: References](chapters/appendix-c-references/index.qmd)
 
 ---
 

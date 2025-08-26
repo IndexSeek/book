@@ -1,0 +1,70 @@
+target-version = "py313"
+line-length = 88
+preview = true
+
+[lint]
+
+select = [
+    "E",
+    "W",
+    "I",
+]
+
+unfixable = [
+    "F401",
+]
+
+[lint.mccabe]
+max-complexity = 12
+
+[lint.per-file-ignores]
+"**/*.qmd" = [
+    "F401",
+    # May have undefined names in code blocks
+    "F821",
+    # May have multiple statements on one line for demos
+    "E702",
+    # May have lambda assignments for brevity in examples
+    "E731",
+]
+
+[lint.isort]
+known-first-party = ["ibis"]
+force-single-line = false
+lines-after-imports = 2
+combine-as-imports = true
+
+[lint.pyupgrade]
+# Use Python 3.13+ features
+keep-runtime-typing = false
+
+[lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+# Exclude common directories
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv",
+    "venv",
+    ".env",
+    "env",
+    "build",
+    "dist",
+    ".pytest_cache",
+    ".coverage",
+    "htmlcov",
+    ".mypy_cache",
+    ".ruff_cache",
+    "node_modules",
+    "_book",
+]

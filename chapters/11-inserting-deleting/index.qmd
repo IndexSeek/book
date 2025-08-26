@@ -1,0 +1,25 @@
+---
+title: "Data Modification Operations"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Insert new data into tables using various methods
+- Delete data based on conditional logic
+- Update existing records in place
+- Handle data modification conflicts and constraints
+
+This chapter covers how to insert new data and delete existing data using Ibis.
+
+## Introduction
+
+Data manipulation operations like inserting and deleting are fundamental to working
+with databases. While Ibis primarily focuses on analytical workloads, it also provides
+capabilities for inserting and deleting data.
+
+## Summary
+
+TODO: Add chapter summary

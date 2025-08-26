@@ -1,0 +1,20 @@
+---
+title: "Real-World Examples"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Integrate multiple Ibis concepts in complete analytical workflows
+- Build end-to-end data pipelines for business intelligence
+- Apply best practices for production data analysis
+- Solve complex analytical problems using combined techniques
+
+This chapter presents a complete, practical example of using Ibis for market analysis
+using the World of Warcraft auction house data.
+
+---
+
+*This chapter is a work in progress.*

@@ -10,7 +10,7 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.12.10
     hooks:
-      - id: ruff
+      - id: ruff-check
         args: [--fix]
       - id: ruff-format
 
@@ -19,10 +19,11 @@ repos:
     hooks:
       - id: codespell
 
+
   - repo: local
     hooks:
       - id: wrap-prose
-        name: Wrap prose in QMD files
+        name: Wrap prose in QMD and MD files
         entry: .pre-commit-hooks/wrap-prose.sh
         language: script
-        files: \.qmd$
+        files: \.(qmd|md)$

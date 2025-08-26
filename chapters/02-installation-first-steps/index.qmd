@@ -1,0 +1,55 @@
+---
+title: "Installation & First Steps"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Install Ibis and set up development environment
+- Load and explore the World of Warcraft dataset
+- Perform basic data exploration (shape, columns, sampling)
+- Execute your first Ibis transformations
+
+This chapter introduces Ibis and demonstrates basic data exploration using the World
+of Warcraft avatar history dataset.
+
+## Why Ibis Matters
+
+Ibis provides a unified interface across different SQL dialects and data processing
+frameworks. Instead of learning multiple syntaxes, you write Python code once and run
+it on any backend.
+
+## Working with the World of Warcraft Dataset
+
+For this book, we'll use the World of Warcraft avatar history dataset, which contains
+over 10 million records of auction house data. This dataset provides realistic complexity
+for learning data analysis patterns while being manageable in size for local development.
+
+```{python}
+import ibis
+from ibis import _
+
+# Load World of Warcraft avatar history data
+wowah = ibis.examples.wowah_data_raw.fetch()
+
+# Basic exploration
+print("Dataset shape:", wowah.count().execute(), "rows")
+print("Columns:", wowah.columns)
+
+# Sample data exploration
+sample = wowah.head(3).execute()
+print(sample)
+
+# TODO: Add simple data analysis examples
+```
+
+This example shows the basic Ibis workflow: load data, explore its structure, and
+perform simple transformations and filtering. The World of Warcraft dataset contains
+auction house data with item names, quantities, server information, and other auction
+details that we'll explore throughout this book.
+
+---
+
+*This chapter is a work in progress.*

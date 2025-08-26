@@ -3,12 +3,12 @@
 [[ $# -eq 0 ]] && exit 0
 
 for f in "$@"; do
-    [[ $f != *.qmd ]] && continue
-    
+    [[ $f != *.qmd && $f != *.md ]] && continue
+
     tmp=$(mktemp)
     code=0
     yaml=0
-    
+
     while read -r line; do
         case "$line" in
             "---")
@@ -30,6 +30,6 @@ for f in "$@"; do
                 ;;
         esac
     done < "$f" > "$tmp"
-    
+
     mv "$tmp" "$f"
 done

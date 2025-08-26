@@ -1,0 +1,40 @@
+---
+title: "Window Functions"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Understand window functions vs. aggregate functions
+- Use ranking functions (rank, row_number, dense_rank)
+- Calculate running totals and moving averages
+- Apply analytical functions (lag, lead, first_value, last_value)
+
+This chapter covers advanced analytical functions using window operations in Ibis,
+which compute values across a set of rows related to the current row while preserving
+the original table structure.
+
+## What Are Window Functions?
+
+Window functions compute values across a set of rows related to the current row,
+unlike aggregate functions which collapse rows into groups:
+
+```{python}
+# TODO: Add window function examples
+# This will demonstrate:
+# - Ranking functions (rank, row_number, dense_rank)
+# - Aggregate functions with windows (sum, mean, count)
+# - Analytical functions (lag, lead, first_value, last_value)
+# - Frame specifications and partitioning
+# - Moving averages and running totals
+```
+
+This chapter will demonstrate advanced analytical functions using window operations
+including ranking, running totals, moving averages, and analytical functions that
+preserve all original rows while computing values across related row sets.
+
+---
+
+*This chapter is a work in progress.*

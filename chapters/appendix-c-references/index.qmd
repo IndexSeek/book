@@ -1,0 +1,13 @@
+---
+title: "References"
+format: html
+---
+
+This appendix contains all the references cited throughout the book. These sources
+provide additional context, background information, and further reading on the topics
+covered in each chapter.
+
+## Bibliography
+
+::: {#refs}
+:::

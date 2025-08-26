@@ -5,17 +5,57 @@ project:
 jupyter: python3
 
 book:
-  title: "Book About Ibis"
-  author: "Author Name"
-  date: "2025"
-  
+  title: "Data Wrangling with Ibis"
+  author: "Tyler White"
+  date: "August 23, 2025"
+
   chapters:
     - index.qmd
-    - book/chapter1.qmd
-    - book/chapter2.qmd
+    - chapters/00-acknowledgements/index.qmd
+    - part: "Introduction"
+      chapters:
+        - chapters/01-introduction/index.qmd
+        - chapters/02-installation-first-steps/index.qmd
+    - part: "Language Fundamentals"
+      chapters:
+        - chapters/03-core-concepts-expression-system/index.qmd
+        - chapters/04-working-with-data-types/index.qmd
+        - chapters/05-data-sources-backends/index.qmd
+    - part: "Data Manipulation"
+      chapters:
+        - chapters/06-data-selection-transformation/index.qmd
+    - part: "Grouping & Aggregation"
+      chapters:
+        - chapters/07-grouping-aggregation/index.qmd
+        - chapters/08-joining-combining/index.qmd
+    - part: "Window Functions"
+      chapters:
+        - chapters/09-window-functions/index.qmd
+    - part: "Advanced Topics"
+      chapters:
+        - chapters/10-arrays-json-complex-types/index.qmd
+        - chapters/11-inserting-deleting/index.qmd
+        - chapters/12-geospatial/index.qmd
+        - chapters/13-real-world-examples/index.qmd
+    - part: "Appendices"
+      chapters:
+        - chapters/appendix-a-backend-compatibility/index.qmd
+        - chapters/appendix-b-migration-guide/index.qmd
+        - chapters/appendix-c-references/index.qmd
+
+bibliography: references.bib
 
 format:
   html:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    keep-tex: true
+    include-in-header:
+      - text: |
+          \usepackage{fancyhdr}
+          \pagestyle{fancy}
+          \fancyhf{}
+          \fancyhead[LE,RO]{\thepage}
+          \fancyhead[RE,LO]{\leftmark}
+          \renewcommand{\headrulewidth}{0.4pt}

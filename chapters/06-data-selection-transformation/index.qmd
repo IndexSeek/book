@@ -1,0 +1,38 @@
+---
+title: "Data Selection & Transformation"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Filter data using complex conditions and logical operators
+- Select and rename columns effectively
+- Create calculated columns and transformations
+- Chain multiple operations in analysis pipelines
+
+Filtering, selecting, and transforming data are the bread and butter of data analysis. If
+you master these three operations, you can solve 80% of real-world data problems.
+
+## Comprehensive Filtering and Transformation
+
+This example demonstrates the most common data manipulation patterns you'll use in
+real-world analysis:
+
+```{python}
+# TODO: Add filtering, selecting, and transformation examples
+# This will demonstrate:
+# - Multiple filtering conditions with logical operators
+# - Data transformations and calculated columns
+# - Column selection and aliasing
+# - String manipulations and conditional logic
+```
+
+This chapter will demonstrate the three core operations for data manipulation: filtering
+data with conditions, transforming data with calculations and new columns, and selecting
+specific columns. These operations form the foundation of most data analysis workflows.
+
+---
+
+*This chapter is a work in progress.*

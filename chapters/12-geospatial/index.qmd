@@ -1,0 +1,26 @@
+---
+title: "Geospatial Data Analysis"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Work with geospatial data types (Point, Line, Polygon)
+- Perform spatial operations and distance calculations
+- Execute spatial joins and geometric operations
+- Handle coordinate systems and projections
+
+This chapter explores geospatial data analysis capabilities in Ibis, including working
+with geometric data types and spatial operations.
+
+## Introduction
+
+Geospatial data analysis is increasingly important in many domains, from urban planning
+to logistics to environmental science. Ibis provides support for geospatial operations
+through various backends that support spatial data types and functions.
+
+## Summary
+
+TODO: Add chapter summary

@@ -1,0 +1,38 @@
+---
+title: "Joining & Combining"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Execute different join types (inner, left, right, outer)
+- Join tables on single and multiple columns
+- Combine datasets using union operations
+- Handle complex multi-table relationships
+
+This chapter explores how to combine data from multiple tables using various types of
+joins (inner, outer, left, right) and other data combining techniques.
+
+## Joining Tables
+
+To demonstrate joins, we'll create a supplementary table with server information and
+join it with the World of Warcraft auction data:
+
+```{python}
+# TODO: Add joining and combining examples
+# This will demonstrate:
+# - Different join types (inner, left, right, outer)
+# - Joining on single and multiple columns
+# - Combining data from multiple sources
+# - Union and concatenation operations
+```
+
+This chapter will demonstrate various techniques for combining data from multiple tables
+including different join types (inner, left, right, outer), joining on multiple columns,
+and union operations.
+
+---
+
+*This chapter is a work in progress.*

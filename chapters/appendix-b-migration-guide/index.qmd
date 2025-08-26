@@ -1,0 +1,62 @@
+---
+title: "Appendix B: Migration Guide"
+format: html
+---
+
+This appendix offers practical guidance for migrating existing data workflows to Ibis,
+including translation guides from pandas, SQL, and dplyr.
+
+## Migrating from Other Tools
+
+Here's how common data operations translate to Ibis using the World of Warcraft dataset:
+
+```{python}
+import ibis
+from ibis import _
+
+wowah = ibis.examples.wowah_data_raw.fetch()
+
+# SQL to Ibis translation
+# SQL: SELECT race, AVG(level) as avg_level FROM wowah
+#      WHERE level > 10 GROUP BY race ORDER BY avg_level DESC;
+sql_to_ibis = (
+wowah
+.filter(_.level > 10)
+.group_by(_.race)
+.aggregate(avg_level=_.level.mean())
+.order_by(_.avg_level.desc())
+)
+
+# pandas to Ibis translation
+# df[df['level'] > 10].groupby('race')['level'].mean().sort_values(ascending=False)
+pandas_to_ibis = (
+wowah
+.filter(_.level > 10)
+.group_by(_.race)
+.aggregate(avg_level=_.level.mean())
+.order_by(_.avg_level.desc())
+)
+
+# dplyr (R) to Ibis translation
+# wowah %>% filter(level > 10) %>% group_by(race) %>%
+# summarize(avg_level = mean(level)) %>% arrange(desc(avg_level))
+dplyr_to_ibis = (
+wowah
+.filter(_.level > 10)
+.group_by(_.race)
+.aggregate(avg_level=_.level.mean())
+.order_by(_.avg_level.desc())
+)
+
+result = sql_to_ibis.execute()
+print(result)
+```
+
+Key migration patterns: use `.filter()` instead of WHERE clauses, use
+`.group_by().aggregate()` instead of GROUP BY, use `.order_by()` instead of ORDER BY,
+and use method chaining instead of nested functions. The Ibis syntax is consistent
+across all backends, making migration straightforward.
+
+---
+
+*This chapter is a work in progress.*

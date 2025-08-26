@@ -1,0 +1,30 @@
+---
+title: "Appendix A: Backend Compatibility"
+format: html
+---
+
+This appendix provides comprehensive compatibility matrices showing which Ibis operations
+and functions are supported by each backend, helping you choose the right backend for
+your specific use case.
+
+## Backend Compatibility Overview
+
+Different Ibis backends have varying levels of support for operations. Here's how the
+World of Warcraft dataset examples work across major backends:
+
+```{python}
+# TODO: Add backend compatibility examples and matrices
+# This will demonstrate:
+# - Universal operations that work across all backends
+# - Backend-specific capabilities and limitations
+# - Performance considerations by backend
+# - Migration strategies between backends
+```
+
+This appendix will provide detailed compatibility matrices showing which Ibis operations
+work with each backend, helping you make informed decisions about backend selection
+for your specific use cases.
+
+---
+
+*This chapter is a work in progress.*

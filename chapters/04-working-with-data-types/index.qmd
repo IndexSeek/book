@@ -1,0 +1,42 @@
+---
+title: "Working with Data Types"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Inspect and understand data type schemas
+- Perform type conversions using `cast()`
+- Work with strings, numbers, and boolean operations
+- Handle type-specific operations across different backends
+
+Data types matter more than you think. The difference between a string and a numeric
+type can make or break your analysis, and understanding how Ibis handles types across
+different backends will save you hours of debugging.
+
+## Working with Data Types
+
+This example demonstrates how to inspect, convert, and work with different data types
+in the World of Warcraft dataset:
+
+```{python}
+import ibis
+
+# Load the World of Warcraft dataset
+wowah = ibis.examples.wowah_data_raw.fetch()
+
+# Inspect data types
+print("Schema:")
+print(wowah.schema())
+```
+
+This example shows how Ibis handles different data types: strings (with operations like
+`upper()` and `lower()`), numeric values (with rounding and arithmetic), booleans (from
+comparison operations), and type conversions using `cast()`. The `case()` statement
+demonstrates conditional logic that returns string values based on numeric conditions.
+
+---
+
+*This chapter is a work in progress.*

@@ -1,0 +1,38 @@
+---
+title: "Grouping & Aggregation"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Group data by single and multiple columns
+- Apply various aggregation functions (count, sum, mean, etc.)
+- Perform conditional aggregations
+
+This chapter demonstrates how to perform group-by operations and aggregations in
+Ibis, covering grouping by single and multiple columns along with various aggregation
+functions.
+
+## Understanding Grouping and Aggregation
+
+GROUP BY transforms your table from individual rows to groups of rows, allowing you
+to calculate summary statistics for each group:
+
+```{python}
+# TODO: Add grouping and aggregation examples
+# This will demonstrate:
+# - Group by single and multiple columns
+# - Various aggregation functions (count, sum, mean, min, max, etc.)
+# - Conditional aggregations
+# - Complex multi-level aggregations
+```
+
+This chapter will demonstrate comprehensive grouping and aggregation patterns including
+single and multiple column grouping, various aggregation functions, conditional
+aggregations, and the difference between WHERE and HAVING clauses.
+
+---
+
+*This chapter is a work in progress.*

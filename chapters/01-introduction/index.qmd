@@ -1,0 +1,162 @@
+---
+title: "Introduction"
+format: html
+---
+
+## Learning Objectives
+
+By the end of this chapter, you will be able to:
+
+- Understand what Ibis is and its core value proposition
+- Recognize similarities between Ibis and other data analysis tools (dplyr, PySpark)
+- Set up interactive development environment with `ibis.interactive`
+- Execute basic data operations using the deferred expression API (`_`)
+
+## What is Ibis?
+
+Ibis is a Python library that provides a unified interface for data analysis across
+different database backends and query engines.
+
+### Familiar syntax
+
+Ibis provides a consistent API that will feel familiar regardless of your background. The
+library's design draws inspiration from popular data manipulation tools, creating a
+unified syntax that translates to optimal code for each backend.
+
+::: {.panel-tabset group="language"}
+
+## Ibis (Python)
+```python
+result = (
+table
+.filter(_.age > 21)
+.group_by(_.department)
+.summarize(avg_salary=_.salary.mean())
+.arrange(_.avg_salary.desc())
+)
+```
+
+## dplyr (R)
+```r
+result <- table %>%
+filter(age > 21) %>%
+group_by(department) %>%
+summarize(avg_salary = mean(salary)) %>%
+arrange(desc(avg_salary))
+```
+
+## PySpark
+```python
+result = (
+table
+.filter(col("age") > 21)
+.groupBy("department")
+.agg(avg("salary").alias("avg_salary"))
+.orderBy(desc("avg_salary"))
+)
+```
+
+:::
+
+The mental model is identical across all three: start with your data, then apply a
+series of transformations using a pipeline of operations. The deferred expression API,
+or `_`, in Ibis
+serves the same role as bare column names in dplyr and `col()` in PySpark, making the
+code readable and intuitive.
+
+### Write Once, Run Anywhere
+
+One of Ibis's greatest strengths is portability. Code you write for a local DuckDB
+file can often run unchanged against when querying a Snowflake table or a streaming
+backend.
+
+## Overview
+
+While SQL is powerful and ubiquitous, it can be verbose and inconsistent across
+different database systems. The challenges identified by @mckinney2017arrow around pandas
+limitations and the growing complexity of the modern data stack [@voltrondata2024codex]
+highlight the need for better abstractions. Ibis [@ibis] provides a more Pythonic way
+to express data transformations while still leveraging the full power of your database
+engine, addressing these ecosystem challenges through a unified interface.
+
+As @forsyth2024farewell observes, "Ibis provides a more robust, scalable, and
+backend-agnostic alternative that addresses many of pandas' fundamental limitations
+while maintaining the familiar dataframe API that data scientists love." This positions
+Ibis not just as another data library, but as the next evolution in Python data analysis
+tooling—one that scales from local prototypes to production systems seamlessly.
+
+I hope to continue to expand a lot more on the above.
+
+## Key Points
+
+- Ibis provides a unified Python interface for multiple database backends
+- Python's simplicity makes data analysis accessible to a broader audience
+
+## Backend Compatibility
+
+Ibis supports many backends, but not all operations work across them all. Understanding
+backend capabilities is crucial for writing portable code.
+
+### Backend Compatibility
+
+Not all operations work across every backend. We'll use callout blocks to indicate
+compatibility:
+
+::: {.callout-note}
+**Universal Support:** Core operations work across all backends
+:::
+
+::: {.callout-warning}
+**Limited Support:** Advanced features like arrays may only work on select backends
+:::
+
+## Interactive Development with Ibis
+
+Throughout this book, we'll be working in IPython environments where interactive data
+exploration is essential. Ibis provides a convenient interactive mode that automatically
+configures pretty printing and other helpful features for exploratory analysis.
+
+When working interactively, you'll typically start your session with:
+
+```python
+In [1]: from ibis.interactive import *
+```
+
+This import automatically sets up Ibis with sensible defaults for interactive use,
+including enhanced table display formatting and automatic result printing. All code
+examples in this book will show the familiar `In [1]:` IPython prompt format to help
+you follow along in your own interactive sessions.
+
+## Getting Started with Ibis
+
+Let's explore some basic data operations using Ibis:
+
+::: {.callout-note}
+**Backend Support:** Basic filtering, grouping, and aggregation work across all backends
+:::
+
+```python
+In [1]: from ibis.interactive import *
+
+In [2]: # Create a simple in-memory table
+...: data = ibis.memtable([
+...:     {"name": "Alice", "age": 25, "city": "NYC"},
+...:     {"name": "Bob", "age": 30, "city": "SF"},
+...:     {"name": "Carol", "age": 35, "city": "NYC"}
+...: ])
+
+In [3]: # Filter and aggregate
+...: result = (
+...:     data
+...:     .filter(_.age > 25)
+...:     .group_by(_.city)
+...:     .agg(avg_age=_.age.mean())
+...:     .order_by(_.avg_age.desc())
+...: )
+
+In [4]: result
+```
+
+---
+
+*This chapter is a work in progress.*
