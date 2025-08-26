@@ -15,7 +15,7 @@ By the end of this chapter, you will be able to:
 This chapter introduces Ibis and demonstrates basic data exploration using the World
 of Warcraft avatar history dataset.
 
-## Why Ibis Matters
+## Why Ibis?
 
 Ibis provides a unified interface across different SQL dialects and data processing
 frameworks. Instead of learning multiple syntaxes, you write Python code once and run

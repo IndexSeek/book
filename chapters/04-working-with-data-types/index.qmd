@@ -34,8 +34,7 @@ print(wowah.schema())
 
 This example shows how Ibis handles different data types: strings (with operations like
 `upper()` and `lower()`), numeric values (with rounding and arithmetic), booleans (from
-comparison operations), and type conversions using `cast()`. The `case()` statement
-demonstrates conditional logic that returns string values based on numeric conditions.
+comparison operations).
 
 ---
 

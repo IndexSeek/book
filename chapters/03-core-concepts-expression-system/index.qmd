@@ -8,7 +8,7 @@ format: html
 By the end of this chapter, you will be able to:
 
 - Understand lazy evaluation and expression trees
-- Master the `_` selector for column references
+- Master deferred expression API for column references
 - Build data transformation pipelines using method chaining
 - Differentiate between expressions and executed results
 
@@ -27,7 +27,7 @@ similar methods
 
 ## The Expression System
 
-Ibis uses a powerful expression system with the `_` selector for column references. This
+Ibis uses a powerful expression system with the `_` API. This
 example demonstrates filtering, selecting, calculated fields, and method chaining:
 
 ```{python}
@@ -38,10 +38,6 @@ example demonstrates filtering, selecting, calculated fields, and method chainin
 # - Method chaining and transformations
 # - Basic filtering, selecting, and ordering operations
 ```
-
-This chapter will demonstrate the foundational concepts of Ibis including expression
-trees, lazy evaluation, the `_` selector system, and method chaining to build data
-transformation pipelines.
 
 ---
 
